@@ -1,0 +1,37 @@
+/* main.css — simple nature blog theme (greens & browns) */
+:root{
+  --bg:#f6f6f2;
+  --accent:#2f6f4e; /* deep green */
+  --accent-2:#6fa97a; /* lighter green */
+  --muted:#6b3e26; /* brown */
+  --text:#222;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.6;color:var(--text);background:var(--bg);margin:0}
+a{color:var(--accent)}
+.header{background:linear-gradient(180deg,var(--accent-2),var(--accent));color:#fff;padding:48px 20px;text-align:center}
+.header h1{margin:0;font-size:2rem}
+.header p{margin:8px 0 0;color:rgba(255,255,255,0.9)}
+.container{max-width:980px;margin:28px auto;padding:0 18px}
+.grid{display:grid;grid-template-columns:1fr 320px;gap:28px}
+@media(max-width:880px){.grid{grid-template-columns:1fr}}
+.post{background:var(--card);border-radius:8px;padding:18px;box-shadow:0 6px 18px rgba(31,31,31,0.06)}
+.post h2{margin:0 0 8px;color:var(--muted)}
+.post .meta{font-size:0.9rem;color:#666;margin-bottom:12px}
+.post p{margin:0 0 12px}
+.button{display:inline-block;background:var(--accent);color:#fff;padding:8px 14px;border-radius:6px;text-decoration:none}
+.sidebar .card{background:linear-gradient(180deg, #fff, #fbfbfa);border-radius:8px;padding:16px;box-shadow:0 6px 18px rgba(31,31,31,0.04);}
+.footer{border-top:1px solid #e6e6e0;padding:18px 0;text-align:center;color:#666;margin-top:36px}
+.hero-img{width:100%;height:200px;object-fit:cover;border-radius:6px;margin-bottom:12px}
+.post-list{display:grid;gap:12px}
+.post-excerpt{color:#333}
+.post-tease{display:flex;gap:12px;align-items:flex-start}
+.post-tease img{width:140px;height:88px;object-fit:cover;border-radius:6px}
+.nav{display:flex;gap:12px;justify-content:center;margin-top:12px}
+.nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:6px;background:rgba(0,0,0,0.08)}
+/* small utilities */
+.center{text-align:center}
+.badge{display:inline-block;background:var(--accent-2);color:#fff;padding:4px 8px;border-radius:999px;font-size:0.8rem}
+/* responsive tweaks */
+@media(max-width:520px){.post-tease img{display:none}}
